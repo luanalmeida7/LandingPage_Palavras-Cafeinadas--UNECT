@@ -1,0 +1,84 @@
+ .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
+        background-color: #57290b; /* Cor de fundo da navbar */
+        position: fixed; /* Fixa a navbar no topo */
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza a navbar */
+        z-index: 1000; /* Coloca a navbar acima de outros elementos */
+        opacity: 1; /* Opacidade visível */
+        padding: 0 20px; /* Espaçamento interno */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para efeito de profundidade */
+    }
+    
+    .logo img {
+        width: 138px;
+        height: 85px;
+        top: 7px;
+        left: 651px;
+        gap: 0px;
+        opacity: 0px;
+
+    }
+    
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 42px; /* Espaçamento entre os itens */
+    }
+    
+    .nav-item {
+        position: relative;
+    }
+    
+    .nav-link {
+        text-decoration: underline 1px #B2784A; /* Adiciona sublinhado ao texto */
+        color: #f0f0f0; /* Cor do texto */
+        font-size: 1.3em; /* Tamanho da fonte */
+        font-family:"Cormorant Garamond", serif;
+    }
+    
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .hamburger .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #f0f0f0;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+    
+    /* Estilos Responsivos */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column; /* Muda a direção em telas menores */
+            align-items: flex-start; /* Alinha à esquerda */
+        }
+    
+        .nav-menu {
+            flex-direction: column; /* Coloca os itens em coluna */
+            width: 100%; /* Largura total */
+            display: none; /* Esconde o menu por padrão */
+        }
+    
+        .nav-item {
+            width: 100%; /* Cada item ocupa a largura total */
+            text-align: center; /* Centraliza o texto */
+        }
+    
+        .hamburger {
+            display: flex; /* Mostra o menu hambúrguer */
+        }
+    
+        .nav-menu.active {
+            display: flex; /* Mostra o menu quando ativo */
+        }
+    }
